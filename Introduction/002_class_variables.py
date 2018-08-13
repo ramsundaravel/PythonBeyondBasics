@@ -1,5 +1,5 @@
 class Employee:
-    # class variables are common across all instance
+    # class variables are common across all instances
     # use case - sharing same information for all instances of a class
     # example - annual pay raise should be same for all employees
     # example 2 - count number of employees (end..)
