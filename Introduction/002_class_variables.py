@@ -1,10 +1,10 @@
 class Employee:
-    # class variables are common across all classes
-    # use case - sharing same information for all instance of a class
+    # class variables are common across all instance
+    # use case - sharing same information for all instances of a class
     # example - annual pay raise should be same for all employees
-    # example 2 - count number of variables
+    # example 2 - count number of employees (end..)
 
-    pay_raise_pct = 0.04 # this is a class variables
+    pay_raise_pct = 0.04 # this is a class variable
     num_of_employees = 0
 
     def __init__(self, first, last, pay): # self defines passing instance of a class
