@@ -5,8 +5,8 @@ class Employee:
     # automically called when defining instance of a class
 
     def __init__(self, first, last, pay): # self defines passing instance of a class
-        self.fname = first
-        self.lname = last
+        self.fname = first   # these are all instance variables
+        self.lname = last    # which means specific to one instance
         self.pay = pay
         self.email = self.fname + "."+self.lname+"@company.com"
 
