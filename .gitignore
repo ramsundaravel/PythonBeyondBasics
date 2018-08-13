@@ -102,3 +102,7 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+
+PythonBeyondBasics_hdi_settings.json
+settings.json
