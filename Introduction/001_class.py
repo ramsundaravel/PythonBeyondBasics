@@ -1,5 +1,9 @@
 # defining a class
 class Employee:
+    # __init__ is used to initialize instance variables
+    # equivalent of constructor in Java
+    # automically called when defining instance of a class
+
     def __init__(self, first, last, pay): # self defines passing instance of a class
         self.fname = first
         self.lname = last
@@ -19,4 +23,3 @@ emp2 = Employee('Test','User','80000')
 print(emp1.get_fname()) # here instance is automatically passed
 print(Employee.get_fname(emp2)) # equivalent of above statement. 
 # Passing instance manually. this is behind the scene how instance method works.
-#  
