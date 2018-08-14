@@ -50,4 +50,3 @@ print(emp1.num_of_employees)
 # hierachy here  - instance variable, class variable.
 # changes made through instance can't get change if we call that variable
 # using class name
-
