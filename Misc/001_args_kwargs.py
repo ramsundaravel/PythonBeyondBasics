@@ -12,8 +12,12 @@ def foo(required, *args, **kwargs):
 
 foo('Ram')
 foo('Ram',1,2,3,4,5)
-foo('Ram',1,2,3,4,5,key1='value1')
+foo('Ram',1,2,3,4,5,key1='value1',10,11)
 
-# important to understant
+# foo('Ram',1,2,3,4,5,key1='value1',10,11)                                   ^
+# SyntaxError: positional argument follows keyword argument
+
+
+# important to understand
 # * and ** in function definition refers to packing positional or kv pairs to tuple or list
 # * and ** infront of list or dictionary unpacks item to positional arguments 
