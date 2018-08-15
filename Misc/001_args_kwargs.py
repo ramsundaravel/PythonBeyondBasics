@@ -12,7 +12,7 @@ def foo(required, *args, **kwargs):
 
 foo('Ram')
 foo('Ram',1,2,3,4,5)
-foo('Ram',1,2,3,4,5,key1='value1',10,11)
+foo('Ram',1,2,3,4,5,key1='value1')
 
 # foo('Ram',1,2,3,4,5,key1='value1',10,11)                                   ^
 # SyntaxError: positional argument follows keyword argument
