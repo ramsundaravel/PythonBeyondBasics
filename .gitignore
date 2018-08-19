@@ -106,3 +106,4 @@ venv.bak/
 
 PythonBeyondBasics_hdi_settings.json
 settings.json
+.DS.store
