@@ -87,12 +87,61 @@ class decorator_class(object):
 # a('ram','test')
 #---------
 
+
 @decorator_class
 def display_info(name, age):
      print('My name is {name} and age is {age}'.format(name=name, age=age))
 
 display_info('Ram',31)
 #--------------------------------------------------------------------------------------------------
+
+# below examples shows how 2 decorators needs to be added
+# will add content later
+# when we give 2 decorators over a function , treat like nested function
+# function1(function2(argument))
+# execution is from outer to inner
+# execute below code to under clearly 
+# wraps helps to reassign the function name   
+print('\n\n\nExample for decorators 4 ')
+
+from functools import wraps
+
+import time
+def timeit_decorator(func):
+
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        print('Time Decorator started')
+        starttime = time.time()
+        func(*args, **kwargs)
+        endtime = round((time.time() - starttime)*1000,4)
+        print('"{}" function elapsed time - {} miliseconds'.format(func.__name__, endtime ))
+        print('Time Decorator ended')
+    return wrapper
+
+import logging
+logging.basicConfig(filename = 'example.log',level = logging.INFO)
+
+def logging1(func):
+    @wraps(func)
+    def logger_func(*args,**kwargs):
+        print('Log Decorator started')
+        logging.info('Running "{}" with arguments {}'.format(func.__name__, args))
+        print('Running "{}" with arguments {}'.format(func.__name__, args))
+        func(*args, **kwargs)  
+        print('Log Decorator Ended')
+    return logger_func
+
+
+@timeit_decorator
+@logging1
+def dislay_information1(name, age):
+    time.sleep(1)
+    print('My name is {} and age is {}'.format(name, age))
+
+dislay_information1('Ram',32)
+
+
 
 
 
