@@ -1,0 +1,12 @@
+List is used storing
+    1. same kind of values (homegeneous values)
+    2. examples - list of people sames 
+    3. list of x ccoordinates
+    4. List is mutable
+tuple is 
+    1. different kind of values
+    2. example storing (x,y) ccoordinates
+    3. Name and address together
+    5. tuple is immutable
+
+
